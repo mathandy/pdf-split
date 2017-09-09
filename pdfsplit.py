@@ -1,22 +1,33 @@
 #! /usr/bin/env python
 
-"""This is a tool to extract a list of pages from a pdf file.  It 
-requires the package `pyPdf` (available through pip).
+"""Extract a list of pages from a pdf file into a new single pdf file.  
+
+Prerequisites:
+	`pyPdf` (available through pip).
 
 Usage:
-======
-python pdfsplit.py <input_file> <output_file> <pages>
-E.g.
-python pdfsplit.py in.pdf out.pdf 1 3 5 7
+	python pdfsplit.py <input_file> <output_file> <pages>
 
-Note: 
-=====
-You can make this executable on (on Unix) with:
-cd /usr/local/bin
-sudo ln -s "/location/of/file/pdfsplit.py" pdfsplit
+	For example, to create a new pdf named out.pdf from pages 1, 3, 5, 
+	and 7, use::
 
-Then you can execute with 
-pdfsplit in.pdf out.pdf 1 3 5 7"""
+		$ python pdfsplit.py in.pdf out.pdf 1 3 5 7
+
+	Or, if you've followed the "How to..." below::
+
+		$ pdfsplit in.pdf out.pdf 1 3 5 7
+
+How to make this script executable from anywhere (on mac or linux):
+	1. Make sure the first line of this script is #!/usr/bin/python
+	2. Make script executable::
+
+	    $ chmod 775 vocab.py
+
+	3. Make a link so that the terminal will find this script::
+
+	    $ sudo ln -s "$PWD"/vocab.py /usr/bin/vocab
+
+"""
 
 import sys
 import os
@@ -46,8 +57,7 @@ def main(argv):
     
 
 def usage():
-	print("Usage: python pdfsplit.py <input_file> <output file> <pages>")
-	print("For example: python pdfsplit.py in.pdf out.pdf 1 3 5 7")
+	print(__doc__)
 
 
 if __name__ == "__main__":
