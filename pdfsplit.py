@@ -24,11 +24,11 @@ How to make this script executable from anywhere (on mac or linux):
 1. Make sure the first line of this script is #!/usr/bin/python
 2. Make script executable::
 
-    $ chmod 775 vocab.py
+    $ chmod 775 pdfsplit.py
 
 3. Make a link so that the terminal will find this script::
 
-    $ sudo ln -s "$PWD"/vocab.py /usr/bin/vocab
+    $ sudo ln -s "$PWD"/pdfsplit.py /usr/bin/pdfsplit
 
 """
 
